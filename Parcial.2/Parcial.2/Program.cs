@@ -1,4 +1,4 @@
-namespace Parcial2
+namespace Parcial._2
 {
     internal static class Program
     {

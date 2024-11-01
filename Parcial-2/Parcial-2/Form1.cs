@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Parcial2
+namespace Parcial_2
 {
     public partial class Form1 : Form
     {
@@ -18,45 +18,45 @@ namespace Parcial2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Limpiar el ListBox
-            listBox1.Items.Clear();
+            // Limpiar ListBox
+            Registro.Items.Clear();
 
             // Validación de entradas
             if (!int.TryParse(textBox1.Text, out int cantidadArchivos) || cantidadArchivos <= 0)
             {
-                listBox1.Items.Add("Ingrese una cantidad válida de archivos.");
+                Registro.Items.Add("Ingrese una cantidad válida de archivos.");
                 return;
             }
 
             if (!float.TryParse(textBox2.Text, out float tamañoPorArchivo) || tamañoPorArchivo <= 0)
             {
-                listBox1.Items.Add("Ingrese un tamaño válido para cada archivo.");
+                Registro.Items.Add("Ingrese un tamaño válido para cada archivo.");
                 return;
             }
 
             if (comboBox1.SelectedIndex == -1)
             {
-                listBox1.Items.Add("Seleccione un tamaño de unidad USB.");
+                Registro.Items.Add("Seleccione un tamaño de unidad USB.");
                 return;
             }
 
-            // Convertir el tamaño de la unidad USB seleccionada a MB
+            // Convertir tamaño USB seleccionado a MB
             float tamañoUSBMB = ConvertirTamañoUSBaMB(comboBox1.SelectedItem.ToString());
 
-            // Calcular el espacio total requerido
+            // Calcular espacio total requerido
             float espacioTotalRequeridoMB = cantidadArchivos * tamañoPorArchivo;
 
-            // Mostrar el resultado en el ListBox
-            listBox1.Items.Add($"Espacio total requerido: {espacioTotalRequeridoMB} MB");
-            listBox1.Items.Add($"Capacidad de la unidad USB: {tamañoUSBMB} MB");
+            // Mostrar resultado en ListBox
+            Registro.Items.Add($"Espacio total requerido: {espacioTotalRequeridoMB} MB");
+            Registro.Items.Add($"Capacidad de la unidad USB: {tamañoUSBMB} MB");
 
             if (espacioTotalRequeridoMB <= tamañoUSBMB)
             {
-                listBox1.Items.Add("Los archivos caben en la unidad USB.");
+                Registro.Items.Add("Los archivos caben en la unidad USB.");
             }
             else
             {
-                listBox1.Items.Add("Los archivos NO caben en la unidad USB.");
+                Registro.Items.Add("Los archivos NO caben en la unidad USB.");
             }
         }
 

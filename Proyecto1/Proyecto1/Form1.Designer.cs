@@ -34,6 +34,7 @@
             button13 = new Button();
             buttonNegativo = new Button();
             buttonDecimal = new Button();
+            HISTORIAL = new ListBox();
             SuspendLayout();
             // 
             // textBox1
@@ -44,6 +45,7 @@
             textBox1.Size = new Size(192, 31);
             textBox1.TabIndex = 0;
             textBox1.Text = "0";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button0
             // 
@@ -225,9 +227,20 @@
             buttonDecimal.UseVisualStyleBackColor = true;
             buttonDecimal.Click += buttonDecimal_Click;
             // 
+            // HISTORIAL
+            // 
+            HISTORIAL.FormattingEnabled = true;
+            HISTORIAL.ItemHeight = 25;
+            HISTORIAL.Location = new Point(388, 24);
+            HISTORIAL.Name = "HISTORIAL";
+            HISTORIAL.Size = new Size(324, 229);
+            HISTORIAL.TabIndex = 19;
+            HISTORIAL.SelectedIndexChanged += textBox1_TextChanged;
+            // 
             // Form1
             // 
-            ClientSize = new Size(377, 281);
+            ClientSize = new Size(740, 276);
+            Controls.Add(HISTORIAL);
             Controls.Add(buttonDecimal);
             Controls.Add(buttonNegativo);
             Controls.Add(button13);
@@ -272,6 +285,7 @@
         private System.Windows.Forms.Button button13; // Limpiar
         private System.Windows.Forms.Button buttonNegativo; // Cambiar signo
         private System.Windows.Forms.Button buttonDecimal; // Punto decimal
+        private ListBox HISTORIAL;
     }
 }
 

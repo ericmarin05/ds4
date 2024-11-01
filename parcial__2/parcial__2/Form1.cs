@@ -1,27 +1,25 @@
-using System;
-using System.Windows.Forms;
-
-namespace Parcial2
+namespace parcial__2
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-
-            // Llenar el ComboBox con tamaños de unidades estándar
             comboBox1.Items.AddRange(new string[] {
                 "1 GB", "2 GB", "4 GB", "8 GB", "16 GB", "32 GB",
                 "64 GB", "128 GB", "256 GB", "512 GB", "1 TB", "2 TB"
             });
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            // Limpiar el ListBox
             listBox1.Items.Clear();
 
-            // Validación de entradas
             if (!int.TryParse(textBox1.Text, out int cantidadArchivos) || cantidadArchivos <= 0)
             {
                 listBox1.Items.Add("Ingrese una cantidad válida de archivos.");
@@ -40,13 +38,10 @@ namespace Parcial2
                 return;
             }
 
-            // Convertir el tamaño de la unidad USB seleccionada a MB
             float tamañoUSBMB = ConvertirTamañoUSBaMB(comboBox1.SelectedItem.ToString());
 
-            // Calcular el espacio total requerido
             float espacioTotalRequeridoMB = cantidadArchivos * tamañoPorArchivo;
 
-            // Mostrar el resultado en el ListBox
             listBox1.Items.Add($"Espacio total requerido: {espacioTotalRequeridoMB} MB");
             listBox1.Items.Add($"Capacidad de la unidad USB: {tamañoUSBMB} MB");
 
@@ -58,15 +53,14 @@ namespace Parcial2
             {
                 listBox1.Items.Add("Los archivos NO caben en la unidad USB.");
             }
-        }
+            public float ConvertirTamañoUSBaMB(string tamañoUSB)
+            {
+                string[] partes = tamañoUSB.Split(' ');
+                float tamaño = float.Parse(partes[0]);
+                string unidad = partes[1];
 
-        private float ConvertirTamañoUSBaMB(string tamañoUSB)
-        {
-            string[] partes = tamañoUSB.Split(' ');
-            float tamaño = float.Parse(partes[0]);
-            string unidad = partes[1];
-
-            return unidad == "GB" ? tamaño * 1024 : tamaño * 1024 * 1024; // Convertir a MB
+                return unidad == "GB" ? tamaño * 1024 : tamaño * 1024 * 1024;
+            }
         }
     }
 }

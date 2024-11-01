@@ -1,4 +1,4 @@
-﻿namespace Parcial2
+﻿namespace Parcial._2
 {
     partial class Form1
     {
@@ -28,79 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            comboBox1 = new ComboBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
             button1 = new Button();
-            listBox1 = new ListBox();
+            Registro = new ListBox();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(56, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(46, 95);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 1;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(274, 97);
+            textBox1.Location = new Point(91, 87);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 2;
+            textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(482, 95);
+            textBox2.Location = new Point(460, 87);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 3;
+            textBox2.TabIndex = 1;
             textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(252, 26);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(215, 33);
+            comboBox1.TabIndex = 2;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(56, 261);
+            button1.Location = new Point(126, 175);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Size = new Size(197, 108);
+            button1.TabIndex = 3;
+            button1.Text = "CONVERTIR ";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // listBox1
+            // Registro
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(312, 196);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(395, 204);
-            listBox1.TabIndex = 5;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            Registro.FormattingEnabled = true;
+            Registro.ItemHeight = 25;
+            Registro.Location = new Point(387, 157);
+            Registro.Name = "Registro";
+            Registro.Size = new Size(401, 254);
+            Registro.TabIndex = 4;
+            Registro.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(listBox1);
+            Controls.Add(Registro);
             Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -109,11 +98,10 @@
 
         #endregion
 
-        private Label label1;
-        private ComboBox comboBox1;
         private TextBox textBox1;
         private TextBox textBox2;
+        private ComboBox comboBox1;
         private Button button1;
-        private ListBox listBox1;
+        private ListBox Registro;
     }
 }

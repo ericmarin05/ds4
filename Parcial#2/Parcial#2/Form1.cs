@@ -19,24 +19,24 @@ namespace Parcial2
         private void button1_Click(object sender, EventArgs e)
         {
             // Limpiar el ListBox
-            listBox1.Items.Clear();
+            registro.Items.Clear();
 
             // Validación de entradas
             if (!int.TryParse(textBox1.Text, out int cantidadArchivos) || cantidadArchivos <= 0)
             {
-                listBox1.Items.Add("Ingrese una cantidad válida de archivos.");
+                registro.Items.Add("Ingrese una cantidad válida de archivos.");
                 return;
             }
 
             if (!float.TryParse(textBox2.Text, out float tamañoPorArchivo) || tamañoPorArchivo <= 0)
             {
-                listBox1.Items.Add("Ingrese un tamaño válido para cada archivo.");
+                registro.Items.Add("Ingrese un tamaño válido para cada archivo.");
                 return;
             }
 
             if (comboBox1.SelectedIndex == -1)
             {
-                listBox1.Items.Add("Seleccione un tamaño de unidad USB.");
+                registro.Items.Add("Seleccione un tamaño de unidad USB.");
                 return;
             }
 
@@ -47,16 +47,16 @@ namespace Parcial2
             float espacioTotalRequeridoMB = cantidadArchivos * tamañoPorArchivo;
 
             // Mostrar el resultado en el ListBox
-            listBox1.Items.Add($"Espacio total requerido: {espacioTotalRequeridoMB} MB");
-            listBox1.Items.Add($"Capacidad de la unidad USB: {tamañoUSBMB} MB");
+            registro.Items.Add($"Espacio total requerido: {espacioTotalRequeridoMB} MB");
+            registro.Items.Add($"Capacidad de la unidad USB: {tamañoUSBMB} MB");
 
             if (espacioTotalRequeridoMB <= tamañoUSBMB)
             {
-                listBox1.Items.Add("Los archivos caben en la unidad USB.");
+                registro.Items.Add("Los archivos caben en la unidad USB.");
             }
             else
             {
-                listBox1.Items.Add("Los archivos NO caben en la unidad USB.");
+                registro.Items.Add("Los archivos NO caben en la unidad USB.");
             }
         }
 
