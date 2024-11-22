@@ -1,0 +1,10 @@
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio 141.csproj.AssemblyReference.cache
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio_141.frmProductos.resources
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio_141.Properties.Resources.resources
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio 141.csproj.GenerateResource.cache
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio 141.csproj.CoreCompileInputs.cache
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\bin\Debug\Laboratorio 141.exe.config
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\bin\Debug\Laboratorio 141.exe
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\bin\Debug\Laboratorio 141.pdb
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio 141.exe
+C:\Users\cajae\source\repos\ds4\Laboratorio 14\Laboratorio 141\obj\Debug\Laboratorio 141.pdb
